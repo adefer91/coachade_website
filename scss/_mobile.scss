@@ -1,0 +1,130 @@
+// Widescreens
+@include mediaXl {
+}
+
+// Desktops & Laptops
+@include mediaLg {
+    .menu {
+        .nav-item > .nav-link {
+            font-size: 20px;
+        }
+    }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+
+    main {
+        align-items: center;
+        text-align: center;
+
+        .main-title {
+            margin-top: 75px;
+        }
+    
+        .lg-heading {
+            font-size: 2.5rem;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .sm-heading {
+            font-size: 1.5rem;
+        }
+    }
+
+    .fade {
+        h3 {
+            font-size: 2rem;
+        }
+    }
+
+    .menu-btn {
+        visibility: visible;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        opacity: 0.9;
+        visibility: hidden;
+
+        &.show {
+            visibility: visible;
+        }
+
+        &-nav {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            float: left;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            background: darken($primary-color, 5);
+            list-style: none;
+            transform: translate3d(0, -100%, 0);
+            @include easeOut;
+
+            &.show {
+            // Slide in from top
+            transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .nav-item {
+            transform: translate3d(600px, 0, 0);
+            @include easeOut;
+        
+            &.show {
+            // Slide in from right
+            transform: translate3d(0, 0, 0);
+            }
+        
+        }
+
+        .nav-link {
+            display: inline-block;
+            position: relative;
+            font-size: 30px;
+            text-transform: uppercase;
+            padding: 1rem 0;
+            font-weight: 300;
+            color: set-text-color($primary-color);
+            text-decoration: none;
+            @include easeOut;
+        
+            &:hover {
+            color: white;
+            }
+        }
+
+    }
+
+
+    // Delay each nav item slide by 0.1s
+    @for $x from 1 through 4 {
+        .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
+        }
+    }
+  
+
+}
+
+
+// Smartphones
+@include mediaSm {
+    @if $show-bg-image {
+        &#fitness_moi {
+            background: $img-fitness-moi;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position-x: center;
+          }
+    }
+}

@@ -1,0 +1,65 @@
+@import 'config';
+@import 'menu';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include background;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+//Titres
+
+
+h1,
+h2,{
+  margin: 0;
+  font-weight: 400;
+  color: $primary-color;
+  font-style: italic;
+  text-align: right;
+  margin-right: 25px;
+
+  &.lg-heading {
+    font-size: 4rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+  }
+}
+
+h1 {
+    span {
+        border-bottom: $secondary-color solid 7px;
+    }
+    .upper {
+        text-transform: uppercase;
+    }
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.fade {
+    h3 {
+        background: -webkit-linear-gradient(darken($primary-color,7), darken($secondary-color,5));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5rem;
+        font-style: italic;
+        font-weight: 400;
+        position: absolute;
+        bottom: 30px;
+        left: 45px;
+    }
+}
+
+@import 'mobile';
