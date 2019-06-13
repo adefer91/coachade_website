@@ -5,6 +5,7 @@ $img-accueil: url("../img/backgrounds/accueil_background.jpg");
 $img-fitness-moi: url("../img/backgrounds/fitness&moi_background.jpg");
 $img-specialites: url("../img/backgrounds/specialites_background.jpg");
 $img-tarifs: url("../img/backgrounds/tarifs_background.jpg");
+$img-contact: url("../img/backgrounds/contact_background.jpg");
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -47,6 +48,15 @@ $img-tarifs: url("../img/backgrounds/tarifs_background.jpg");
         background-position: center;
       }
     }
+
+    &#contact {
+      background: $img-contact;
+      background-attachment: fixed;
+      background-size: cover;
+      @media screen and (max-width: 700px) {
+        background-position: center;
+      }
+    }
   }
 }
 
@@ -61,19 +71,19 @@ $img-tarifs: url("../img/backgrounds/tarifs_background.jpg");
 
 // Media Query Mixins
 @mixin mediaSm {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 650px) {
     @content;
   }
 }
 
 @mixin mediaMd {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 975px) {
     @content;
   }
 }
 
 @mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
+  @media screen and (min-width: 976px) and (max-width: 1170px) {
     @content;
   }
 }

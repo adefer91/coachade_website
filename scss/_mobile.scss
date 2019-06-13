@@ -2,9 +2,11 @@
 @include mediaXl {
 }
 
+
 // Desktops & Laptops
 @include mediaLg {
     .menu {
+        text-align: left;
         .nav-item > .nav-link {
             font-size: 20px;
         }
@@ -112,6 +114,10 @@
         transition-delay: $x * 0.1s;
         }
     }
+
+    #fitnessetmoi-title {
+        top: 5px;
+    }
   
 
 }
@@ -119,6 +125,11 @@
 
 // Smartphones
 @include mediaSm {
+
+    .lg-heading {
+        margin-top: 215px;
+    }
+
     @if $show-bg-image {
         &#fitness_moi {
             background: $img-fitness-moi;
@@ -126,5 +137,31 @@
             background-size: cover;
             background-position-x: center;
           }
+    }
+
+    #fitnessetmoi-title {
+        top: 25px;
+        left: 25px;
+        font-size: 25px;
+        .bigger {
+            font-size: 35px;
+            border: none;
+        }
+    }
+
+    .box {
+        padding: 0.2rem 1rem;
+        margin-top: 4.3rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+
+        .cursive {
+            font-size: 22px;
+            text-align: left;
+        }
+    
+        .desc {
+            font-size: 15px;
+        }
     }
 }

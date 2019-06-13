@@ -13,9 +13,9 @@ body {
     line-height: 1.5;
 }
 
+
+//ACCEUIL
 //Titres
-
-
 h1,
 h2,{
   margin: 0;
@@ -59,6 +59,56 @@ h2 {
         position: absolute;
         bottom: 30px;
         left: 45px;
+    }
+}
+
+//FITNESS ET MOI
+
+#fitnessetmoi-title {
+    background: -webkit-linear-gradient(darken($primary-color,7), darken($secondary-color,5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 55px;
+    text-transform: uppercase;
+    text-align: initial;
+    margin: 0;
+    position: absolute;
+    z-index: 3;
+    top: 70px;
+    left: 75px;
+
+    .bigger {
+        font-size: 75px;
+        border: none;
+    }
+}
+
+.box {
+
+    padding: 0.2rem 1rem;
+    margin: 4rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+    
+    .cursive {
+        font-family: Brush Script MT, Brush Script Std, cursive;
+        color: $secondary-color;
+        font-size: 30px;
+        text-align: center;
+
+        .hashtag {
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+            color: black;
+            font-size: 15px;
+        }
+    }
+
+    .desc {
+        font-style: italic;
+        .bold {
+            font-weight: 600;
+        }
     }
 }
 

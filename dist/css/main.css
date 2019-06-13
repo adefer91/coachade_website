@@ -40,7 +40,7 @@
     color: #f4c65f;
     text-transform: uppercase;
     font-style: italic;
-    font-weight: 550;
+    font-weight: 500;
     font-size: 30px;
     text-align: center;
     padding: 14px 27px;
@@ -85,6 +85,13 @@ body {
     @media screen and (max-width: 700px) {
       body#tarifs {
         background-position: center; } }
+  body#contact {
+    background: url("../img/backgrounds/contact_background.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    @media screen and (max-width: 700px) {
+      body#contact {
+        background-position: center; } }
 
 h1,
 h2 {
@@ -123,11 +130,49 @@ h2 {
   bottom: 30px;
   left: 45px; }
 
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  .menu .nav-item > .nav-link {
-    font-size: 20px; } }
+#fitnessetmoi-title {
+  background: -webkit-linear-gradient(#795db0, #f2be47);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 55px;
+  text-transform: uppercase;
+  text-align: initial;
+  margin: 0;
+  position: absolute;
+  z-index: 3;
+  top: 70px;
+  left: 75px; }
+  #fitnessetmoi-title .bigger {
+    font-size: 75px;
+    border: none; }
 
-@media screen and (max-width: 768px) {
+.box {
+  padding: 0.2rem 1rem;
+  margin: 4rem;
+  background: rgba(147, 124, 191, 0.5); }
+  .box .cursive {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: #f4c65f;
+    font-size: 30px;
+    text-align: center; }
+    .box .cursive .hashtag {
+      font-style: italic;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-transform: uppercase;
+      color: black;
+      font-size: 15px; }
+  .box .desc {
+    font-style: italic; }
+    .box .desc .bold {
+      font-weight: 600; }
+
+@media screen and (min-width: 976px) and (max-width: 1170px) {
+  .menu {
+    text-align: left; }
+    .menu .nav-item > .nav-link {
+      font-size: 20px; } }
+
+@media screen and (max-width: 975px) {
   main {
     align-items: center;
     text-align: center; }
@@ -192,11 +237,32 @@ h2 {
   .nav-item:nth-child(3) {
     transition-delay: 0.3s; }
   .nav-item:nth-child(4) {
-    transition-delay: 0.4s; } }
+    transition-delay: 0.4s; }
+  #fitnessetmoi-title {
+    top: 5px; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
+  .lg-heading {
+    margin-top: 215px; }
   #fitness_moi {
     background: url("../img/backgrounds/fitness&moi_background.jpg");
     background-attachment: fixed;
     background-size: cover;
-    background-position-x: center; } }
+    background-position-x: center; }
+  #fitnessetmoi-title {
+    top: 25px;
+    left: 25px;
+    font-size: 25px; }
+    #fitnessetmoi-title .bigger {
+      font-size: 35px;
+      border: none; }
+  .box {
+    padding: 0.2rem 1rem;
+    margin-top: 4.3rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; }
+    .box .cursive {
+      font-size: 22px;
+      text-align: left; }
+    .box .desc {
+      font-size: 15px; } }
