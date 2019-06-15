@@ -13,8 +13,9 @@ body {
     line-height: 1.5;
 }
 
+///////////////////////////////////////////////////////////////////////////
+// ACCEUIL
 
-//ACCEUIL
 //Titres
 h1,
 h2,{
@@ -62,9 +63,10 @@ h2 {
     }
 }
 
-//FITNESS ET MOI
+///////////////////////////////////////////////////////////////////////////
+// FITNESS ET MOI
 
-#fitnessetmoi-title {
+.box-title {
     background: -webkit-linear-gradient(darken($primary-color,7), darken($secondary-color,5));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -111,5 +113,67 @@ h2 {
         }
     }
 }
+
+///////////////////////////////////////////////////////////////////////////
+// TARIFS
+
+.box-pricing {
+    font-style: italic;
+
+    .square-title {
+        color: darken($secondary-color,5);
+        font-size: 25px;
+        margin-top: 0;
+    }
+
+    .pricing-content {
+        font-size: 22px;
+    }
+
+    .coaching-prive {
+        
+        background: darken($primary-color,5);
+        text-align: right;
+        width: 45%;
+        position: fixed;
+        top: 25%;
+        right: 65%;
+        transform: skew(-20deg);
+
+        .square-title {
+            transform: skew(20deg);
+            margin-right: 35px;
+        }
+
+        .pricing-content {
+            margin-right: 35px;
+            transform: skew(20deg);
+        }
+    }
+
+    .coaching-online {
+        position: fixed;
+        background: darken($primary-color,5);
+        width: 45%;
+        bottom: 10%;
+        left: 65%;
+        transform: skew(20deg);
+
+        .square-title {
+            margin-left: 35px;
+            transform: skew(-20deg);
+        }
+
+        .pricing-content {
+            margin-left: 35px;
+            transform: skew(-20deg);
+        }
+    }
+
+    .coaching-online, .coaching-prive {
+        padding: 0.5rem;
+    }
+}
+
 
 @import 'mobile';

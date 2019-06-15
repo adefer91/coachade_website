@@ -130,7 +130,7 @@ h2 {
   bottom: 30px;
   left: 45px; }
 
-#fitnessetmoi-title {
+.box-title {
   background: -webkit-linear-gradient(#795db0, #f2be47);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -142,7 +142,7 @@ h2 {
   z-index: 3;
   top: 70px;
   left: 75px; }
-  #fitnessetmoi-title .bigger {
+  .box-title .bigger {
     font-size: 75px;
     border: none; }
 
@@ -166,11 +166,59 @@ h2 {
     .box .desc .bold {
       font-weight: 600; }
 
+.box-pricing {
+  font-style: italic; }
+  .box-pricing .square-title {
+    color: #f2be47;
+    font-size: 25px;
+    margin-top: 0; }
+  .box-pricing .pricing-content {
+    font-size: 22px; }
+  .box-pricing .coaching-prive {
+    background: #7f64b4;
+    text-align: right;
+    width: 45%;
+    position: fixed;
+    top: 25%;
+    right: 65%;
+    transform: skew(-20deg); }
+    .box-pricing .coaching-prive .square-title {
+      transform: skew(20deg);
+      margin-right: 35px; }
+    .box-pricing .coaching-prive .pricing-content {
+      margin-right: 35px;
+      transform: skew(20deg); }
+  .box-pricing .coaching-online {
+    position: fixed;
+    background: #7f64b4;
+    width: 45%;
+    bottom: 10%;
+    left: 65%;
+    transform: skew(20deg); }
+    .box-pricing .coaching-online .square-title {
+      margin-left: 35px;
+      transform: skew(-20deg); }
+    .box-pricing .coaching-online .pricing-content {
+      margin-left: 35px;
+      transform: skew(-20deg); }
+  .box-pricing .coaching-online, .box-pricing .coaching-prive {
+    padding: 0.5rem; }
+
 @media screen and (min-width: 976px) and (max-width: 1170px) {
   .menu {
     text-align: left; }
     .menu .nav-item > .nav-link {
-      font-size: 20px; } }
+      font-size: 20px; }
+  .box-pricing .square-title {
+    font-size: 22px; }
+  .box-pricing .pricing-content {
+    font-size: 19px; }
+  .box-pricing .coaching-prive {
+    right: 55%;
+    width: 55%; }
+  .box-pricing .coaching-online {
+    left: 55%;
+    width: 55%; } }
 
 @media screen and (max-width: 975px) {
   main {
@@ -187,13 +235,15 @@ h2 {
   .fade h3 {
     font-size: 2rem; }
   .menu-btn {
-    visibility: visible; }
+    visibility: visible;
+    z-index: 7; }
   .menu {
     position: fixed;
     top: 0;
     width: 100%;
     opacity: 0.9;
-    visibility: hidden; }
+    visibility: hidden;
+    z-index: 6; }
     .menu.show {
       visibility: visible; }
     .menu-nav {
@@ -239,7 +289,38 @@ h2 {
   .nav-item:nth-child(4) {
     transition-delay: 0.4s; }
   #fitnessetmoi-title {
-    top: 5px; } }
+    top: 5px; }
+  .box-title {
+    top: 25px;
+    left: 25px;
+    font-size: 25px; }
+    .box-title .bigger {
+      font-size: 35px;
+      border: none; }
+  .box-pricing {
+    margin-top: 25%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 100%;
+    z-index: -1; }
+    .box-pricing .coaching-online, .box-pricing .coaching-prive {
+      position: unset;
+      transform: skew(0);
+      width: 90%;
+      margin: auto; }
+      .box-pricing .coaching-online .square-title, .box-pricing .coaching-prive .square-title {
+        text-align: center;
+        transform: skew(0);
+        margin-left: 0;
+        margin-right: 0; }
+      .box-pricing .coaching-online .pricing-content, .box-pricing .coaching-prive .pricing-content {
+        font-size: 15px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: none;
+        text-align: center;
+        font-style: normal;
+        transform: skew(0); } }
 
 @media screen and (max-width: 650px) {
   .lg-heading {
