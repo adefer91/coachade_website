@@ -30,11 +30,13 @@
             width: 55%;
         }
     }
+
 }
 
 // Tablets & Small Laptops
 @include mediaMd {
 
+    // MENU BAR
     main {
         align-items: center;
         text-align: center;
@@ -136,6 +138,7 @@
         }
     }
 
+    //FITNESS ET MOI
     #fitnessetmoi-title {
         top: 5px;
     }
@@ -150,6 +153,7 @@
         }
     }
 
+    //TARIF
     .box-pricing {
         margin-top: 25%;
         display: grid;
@@ -181,14 +185,41 @@
             }
         }
     }
+
+    
+
+    //CONTACT
+    .contact {
+        font-size: 40px;
+    }
+    .contact_box {
+        font-size: 20px;
+        width: 50%;
+    }
+
 }
 
 
 // Smartphones
 @include mediaSm {
 
-    .lg-heading {
-        margin-top: 215px;
+    main {
+        align-items: center;
+        text-align: center;
+
+        .main-title {
+            margin-top: 35%;
+        }
+    
+        .lg-heading {
+            font-size: 1.8rem;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .sm-heading {
+            font-size: 1.3rem;
+        }
     }
 
     @if $show-bg-image {
@@ -224,5 +255,69 @@
         .desc {
             font-size: 15px;
         }
+    }
+
+    .contact {
+        font-size: 40px;
+    }
+    .contact_box {
+        width: 90%;
+        margin: auto;
+        margin-top: 30%;
+        padding: 10% 0 2% 0;
+        font-size: 15px;
+    }
+
+    .icons {
+        width: 90%;
+        margin: auto;
+        margin-top: 8%;
+    }
+
+    //SPECIALITES
+    .box-specialties {
+        margin: 0.5rem;
+        margin-top: 32%;
+        padding: 0rem;
+        display: grid;
+        background: none;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 15px;
+    
+        .spec_caf {
+            grid-row: 1;
+            grid-column: 2;
+        }
+    
+        .spec_gym {
+            grid-row: 1;
+            grid-column: 4;
+        }
+        
+        .spec_muscu {
+            grid-row: 4;
+            grid-column: 2;
+        }
+    
+        .spec_running {
+            grid-row: 4;
+            grid-column: 4;
+        }
+    
+        .spec_coachingpers {
+            grid-row: 7;
+            grid-column: 2;
+        }
+    
+        .spec_stretching {
+            grid-row: 7;
+            grid-column: 4;
+        }
+    
+        .spec_prepaphysique {
+            grid-row: 10;
+            grid-column: 3;
+        }
+        
     }
 }

@@ -30,8 +30,67 @@ function toggleMenu() {
     }
 }
 
-function copyToClipBoard() {
-    let text = document.getElementById("email-value").textContent;
-    text.select();
-    document.execCommand("copy");
+var modal = document.getElementById("myModal");
+
+// kettlebells fetch
+var iconCAF = document.getElementById("iconCAF");
+var iconCoachingPers = document.getElementById("iconCoachingPers");
+var iconGym = document.getElementById("iconGym");
+var iconMuscu = document.getElementById("iconMuscu");
+var iconPrepaPhy = document.getElementById("iconPrepaPhy");
+var iconRunning = document.getElementById("iconRunning");
+var iconStretching = document.getElementById("iconStretching");
+
+
+var modalImg = document.getElementById("imgDisplayed");
+var captionText = document.getElementById("caption");
+
+iconCAF.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "img/specialties/CAF.jpg";
+  captionText.innerHTML = "WOD CAF";
 }
+
+iconCoachingPers.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = "img/specialties/coaching_perso.jpg";
+    captionText.innerHTML = "Coachin personnalisé";
+}
+
+iconGym.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = "img/specialties/gymnastique.jpg";
+    captionText.innerHTML = "Gymnastique";
+}
+
+iconMuscu.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = "img/specialties/musculation.jpg";
+    captionText.innerHTML = "Musculation";
+}
+
+iconPrepaPhy.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = "img/specialties/prepa_physique.jpg";
+    captionText.innerHTML = "Préparation physique";
+}
+
+iconRunning.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = "img/specialties/running.jpg";
+    captionText.innerHTML = "Running";
+}
+
+iconStretching.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = "img/specialties/stretching.jpg";
+    captionText.innerHTML = "Stretching";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+} 

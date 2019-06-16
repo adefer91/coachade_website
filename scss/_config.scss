@@ -47,6 +47,21 @@ $img-contact: url("../img/backgrounds/contact_background.jpg");
       @media screen and (max-width: 700px) {
         background-position: center;
       }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 80%;
+        margin: 9%;
+        z-index: -1;
+        background: rgba($primary-color, 0.2);
+        @media screen and (max-width: 975px) {
+          visibility: hidden;
+        }
+    }
     }
 
     &#contact {
@@ -54,7 +69,7 @@ $img-contact: url("../img/backgrounds/contact_background.jpg");
       background-attachment: fixed;
       background-size: cover;
       @media screen and (max-width: 700px) {
-        background-position: center;
+        background-position: right;
       }
     }
   }

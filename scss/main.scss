@@ -1,16 +1,16 @@
-@import 'config';
-@import 'menu';
+@import "config";
+@import "menu";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    @include background;
-    height: 100%;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
+  @include background;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -18,7 +18,7 @@ body {
 
 //Titres
 h1,
-h2,{
+h2 {
   margin: 0;
   font-weight: 400;
   color: $primary-color;
@@ -37,143 +37,357 @@ h2,{
 }
 
 h1 {
-    span {
-        border-bottom: $secondary-color solid 7px;
-    }
-    .upper {
-        text-transform: uppercase;
-    }
+  span {
+    border-bottom: $secondary-color solid 7px;
+  }
+  .upper {
+    margin-top: 2%;
+    text-transform: uppercase;
+  }
 }
 h2 {
-    text-transform: uppercase;
-    font-size: 2.5rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
 }
 
 .fade {
-    h3 {
-        background: -webkit-linear-gradient(darken($primary-color,7), darken($secondary-color,5));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 2.5rem;
-        font-style: italic;
-        font-weight: 400;
-        position: absolute;
-        bottom: 30px;
-        left: 45px;
-    }
+  h3 {
+    background: -webkit-linear-gradient(
+      darken($primary-color, 7),
+      darken($secondary-color, 5)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 400;
+    position: absolute;
+    bottom: 30px;
+    left: 45px;
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////
 // FITNESS ET MOI
 
 .box-title {
-    background: -webkit-linear-gradient(darken($primary-color,7), darken($secondary-color,5));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 55px;
-    text-transform: uppercase;
-    text-align: initial;
-    margin: 0;
-    position: absolute;
-    z-index: 3;
-    top: 70px;
-    left: 75px;
+  background: -webkit-linear-gradient(
+    darken($primary-color, 7),
+    darken($secondary-color, 5)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 55px;
+  text-transform: uppercase;
+  text-align: initial;
+  margin: 0;
+  position: absolute;
+  z-index: 3;
+  top: 70px;
+  left: 75px;
 
-    .bigger {
-        font-size: 75px;
-        border: none;
-    }
+  .bigger {
+    font-size: 75px;
+    border: none;
+  }
 }
 
 .box {
+  padding: 0.2rem 1rem;
+  margin: 4rem;
+  background: rgba(lighten($primary-color, 2), 0.5);
 
-    padding: 0.2rem 1rem;
-    margin: 4rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
-    
-    .cursive {
-        font-family: Brush Script MT, Brush Script Std, cursive;
-        color: $secondary-color;
-        font-size: 30px;
-        text-align: center;
+  .cursive {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: $secondary-color;
+    font-size: 30px;
+    text-align: center;
 
-        .hashtag {
-            font-style: italic;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-transform: uppercase;
-            color: black;
-            font-size: 15px;
-        }
+    .hashtag {
+      font-style: italic;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-transform: uppercase;
+      color: black;
+      font-size: 15px;
     }
+  }
 
-    .desc {
-        font-style: italic;
-        .bold {
-            font-weight: 600;
-        }
+  .desc {
+    font-style: italic;
+    .bold {
+      font-weight: 600;
     }
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////
 // TARIFS
 
+.boxoverlay {
+  background: $primary-color;
+  opacity: 0.5;
+  width: 90%;
+  height: 90%;
+  z-index: 2;
+}
+
 .box-pricing {
-    font-style: italic;
+  font-style: italic;
+
+  .square-title {
+    color: darken($secondary-color, 5);
+    font-size: 25px;
+    margin-top: 0;
+  }
+
+  .pricing-content {
+    font-size: 22px;
+  }
+
+  .coaching-prive {
+    background: darken($primary-color, 5);
+    text-align: right;
+    width: 45%;
+    position: fixed;
+    top: 25%;
+    right: 65%;
+    transform: skew(-20deg);
 
     .square-title {
-        color: darken($secondary-color,5);
-        font-size: 25px;
-        margin-top: 0;
+      transform: skew(20deg);
+      margin-right: 35px;
     }
 
     .pricing-content {
-        font-size: 22px;
+      margin-right: 35px;
+      transform: skew(20deg);
+    }
+  }
+
+  .coaching-online {
+    position: fixed;
+    background: darken($primary-color, 5);
+    width: 45%;
+    bottom: 10%;
+    left: 65%;
+    transform: skew(20deg);
+
+    .square-title {
+      margin-left: 35px;
+      transform: skew(-20deg);
     }
 
-    .coaching-prive {
-        
-        background: darken($primary-color,5);
-        text-align: right;
-        width: 45%;
-        position: fixed;
-        top: 25%;
-        right: 65%;
-        transform: skew(-20deg);
-
-        .square-title {
-            transform: skew(20deg);
-            margin-right: 35px;
-        }
-
-        .pricing-content {
-            margin-right: 35px;
-            transform: skew(20deg);
-        }
+    .pricing-content {
+      margin-left: 35px;
+      transform: skew(-20deg);
     }
+  }
 
-    .coaching-online {
-        position: fixed;
-        background: darken($primary-color,5);
-        width: 45%;
-        bottom: 10%;
-        left: 65%;
-        transform: skew(20deg);
-
-        .square-title {
-            margin-left: 35px;
-            transform: skew(-20deg);
-        }
-
-        .pricing-content {
-            margin-left: 35px;
-            transform: skew(-20deg);
-        }
-    }
-
-    .coaching-online, .coaching-prive {
-        padding: 0.5rem;
-    }
+  .coaching-online,
+  .coaching-prive {
+    padding: 0.5rem;
+  }
 }
 
+///////////////////////////////////////////////////////////////////////////
+// SPECIALITES
 
-@import 'mobile';
+.images {
+  img {
+    display: none;
+  }
+}
+
+/* Style the Image Used to Trigger the Modal */
+.fa-dumbbell {
+  cursor: pointer;
+  color: $secondary-color;
+  &:hover {
+    color: white;
+    @include easeOut;
+  }
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 40px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 7;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.box-specialties {
+    margin: 4rem;
+    padding: 2rem;
+    display: grid;
+    text-align: center;
+    background: rgba(lighten($primary-color, 2), 0.5);
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 40px;
+
+    .spec_caf {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .spec_gym {
+        grid-row: 1;
+        grid-column: 7;
+    }
+    
+    .spec_muscu {
+        grid-row: 5;
+        grid-column: 1;
+    }
+
+    .spec_running {
+        grid-row: 5;
+        grid-column: 7;
+    }
+
+    .spec_coachingpers {
+        grid-row: 9;
+        grid-column: 3;
+    }
+
+    .spec_stretching {
+        grid-row: 9;
+        grid-column: 4;
+    }
+
+    .spec_prepaphysique {
+        grid-row: 9;
+        grid-column: 5;
+    }
+    
+}
+
+///////////////////////////////////////////////////////////////////////////
+// CONTACT
+
+.contact {
+  position: absolute;
+  top: 7.5rem;
+  left: 7.5rem;
+  font-size: 75px;
+}
+
+.contact_box {
+  padding-bottom: 0.2rem;
+  padding-top: 6rem;
+  padding-left: rem;
+  padding-right: 1rem;
+  margin-top: 7rem;
+  margin-left: 7rem;
+  margin-bottom: 3rem;
+  background: darken($primary-color, 5);
+  width: 40%;
+  box-shadow: 10px 5px 5px grey;
+  text-align: center;
+  text-justify: auto;
+  font-size: 25px;
+
+  &:hover {
+    color: white;
+    background: $secondary-color;
+    @include easeOut;
+  }
+}
+
+.icons {
+  margin-left: 15%;
+  margin-top: 3%;
+  width: 30%;
+  display: block;
+  color: darken($primary-color, 5);
+
+  a {
+    padding: 0.4rem;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+@import "mobile";
