@@ -1,0 +1,587 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  visibility: hidden;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #f4c65f;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  text-align: center;
+  opacity: 0.8; }
+  .menu .menu-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8d75bc; }
+  .menu .nav-item {
+    float: none;
+    display: inline-block; }
+    .menu .nav-item.current > a {
+      color: #efad17; }
+  .menu .nav-item > .nav-link {
+    display: block;
+    color: #f4c65f;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    padding: 14px 27px;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
+    .menu .nav-item > .nav-link:hover {
+      color: #de9e0f; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#accueil_img {
+    background: url("../img/backgrounds/accueil_background.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    @media screen and (max-width: 700px) {
+      body#accueil_img {
+        background-position: center; } }
+  body#fitness_moi {
+    background: url("../img/backgrounds/fitness&moi_background.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    @media screen and (max-width: 700px) {
+      body#fitness_moi {
+        background-position: center; } }
+  body#specialites {
+    background: url("../img/backgrounds/specialites_background.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    @media screen and (max-width: 700px) {
+      body#specialites {
+        background-position: center; } }
+  body#tarifs {
+    background: url("../img/backgrounds/tarifs_background.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    @media screen and (max-width: 700px) {
+      body#tarifs {
+        background-position: center; } }
+    body#tarifs:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 80%;
+      margin: 9%;
+      z-index: -1;
+      background: rgba(141, 117, 188, 0.2); }
+      @media screen and (max-width: 975px) {
+        body#tarifs:after {
+          visibility: hidden; } }
+  body#contact {
+    background: url("../img/backgrounds/contact_background.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    @media screen and (max-width: 700px) {
+      body#contact {
+        background-position: right; } }
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400;
+  color: #8d75bc;
+  font-style: italic;
+  text-align: right;
+  margin-right: 25px; }
+  h1.lg-heading,
+  h2.lg-heading {
+    font-size: 4rem; }
+  h1.sm-heading,
+  h2.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem; }
+
+h1 span {
+  border-bottom: #f4c65f solid 7px; }
+
+h1 .upper {
+  margin-top: 2%;
+  text-transform: uppercase; }
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem; }
+
+.fade h3 {
+  background: -webkit-linear-gradient(#795db0, #f2be47);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  bottom: 30px;
+  left: 45px; }
+
+.box-title {
+  background: -webkit-linear-gradient(#795db0, #f2be47);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 55px;
+  text-transform: uppercase;
+  text-align: initial;
+  margin: 0;
+  position: absolute;
+  z-index: 3;
+  top: 70px;
+  left: 75px; }
+  .box-title .bigger {
+    font-size: 75px;
+    border: none; }
+
+.box {
+  padding: 0.2rem 1rem;
+  margin: 4rem;
+  background: rgba(147, 124, 191, 0.5); }
+  .box .cursive {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: #f4c65f;
+    font-size: 30px;
+    text-align: center; }
+    .box .cursive .hashtag {
+      font-style: italic;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-transform: uppercase;
+      color: black;
+      font-size: 15px; }
+  .box .desc {
+    font-style: italic; }
+    .box .desc .bold {
+      font-weight: 600; }
+
+.boxoverlay {
+  background: #8d75bc;
+  opacity: 0.5;
+  width: 90%;
+  height: 90%;
+  z-index: 2; }
+
+.box-pricing {
+  font-style: italic; }
+  .box-pricing .square-title {
+    color: #f2be47;
+    font-size: 25px;
+    margin-top: 0; }
+  .box-pricing .pricing-content {
+    font-size: 22px; }
+  .box-pricing .coaching-prive {
+    background: #7f64b4;
+    text-align: right;
+    width: 45%;
+    position: fixed;
+    top: 25%;
+    right: 65%;
+    transform: skew(-20deg); }
+    .box-pricing .coaching-prive .square-title {
+      transform: skew(20deg);
+      margin-right: 35px; }
+    .box-pricing .coaching-prive .pricing-content {
+      margin-right: 35px;
+      transform: skew(20deg); }
+  .box-pricing .coaching-online {
+    position: fixed;
+    background: #7f64b4;
+    width: 45%;
+    bottom: 10%;
+    left: 65%;
+    transform: skew(20deg); }
+    .box-pricing .coaching-online .square-title {
+      margin-left: 35px;
+      transform: skew(-20deg); }
+    .box-pricing .coaching-online .pricing-content {
+      margin-left: 35px;
+      transform: skew(-20deg); }
+  .box-pricing .coaching-online,
+  .box-pricing .coaching-prive {
+    padding: 0.5rem; }
+
+.images img {
+  display: none; }
+
+/* Style the Image Used to Trigger the Modal */
+.fa-dumbbell {
+  cursor: pointer;
+  color: #f4c65f; }
+  .fa-dumbbell:hover {
+    color: white;
+    transition: all 0.5s ease-out; }
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s; }
+
+#myImg:hover {
+  opacity: 0.7; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */ }
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px; }
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px; }
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s; }
+
+@keyframes zoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 40px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 7; }
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer; }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%; } }
+
+.box-specialties {
+  margin: 4rem;
+  padding: 2rem;
+  display: grid;
+  text-align: center;
+  background: rgba(147, 124, 191, 0.5);
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 40px; }
+  .box-specialties .spec_caf {
+    grid-row: 1;
+    grid-column: 1; }
+  .box-specialties .spec_gym {
+    grid-row: 1;
+    grid-column: 7; }
+  .box-specialties .spec_muscu {
+    grid-row: 5;
+    grid-column: 1; }
+  .box-specialties .spec_running {
+    grid-row: 5;
+    grid-column: 7; }
+  .box-specialties .spec_coachingpers {
+    grid-row: 9;
+    grid-column: 3; }
+  .box-specialties .spec_stretching {
+    grid-row: 9;
+    grid-column: 4; }
+  .box-specialties .spec_prepaphysique {
+    grid-row: 9;
+    grid-column: 5; }
+
+.contact {
+  position: absolute;
+  top: 7.5rem;
+  left: 7.5rem;
+  font-size: 75px; }
+
+.contact_box {
+  padding-bottom: 0.2rem;
+  padding-top: 6rem;
+  padding-left: rem;
+  padding-right: 1rem;
+  margin-top: 7rem;
+  margin-left: 7rem;
+  margin-bottom: 3rem;
+  background: #7f64b4;
+  width: 40%;
+  box-shadow: 10px 5px 5px grey;
+  text-align: center;
+  text-justify: auto;
+  font-size: 25px; }
+  .contact_box:hover {
+    color: white;
+    background: #f4c65f;
+    transition: all 0.5s ease-out; }
+
+.icons {
+  margin-left: 15%;
+  margin-top: 3%;
+  width: 30%;
+  display: block;
+  color: #7f64b4; }
+  .icons a {
+    padding: 0.4rem;
+    transition: all 0.5s ease-out; }
+    .icons a:hover {
+      color: #f4c65f; }
+
+@media screen and (min-width: 976px) and (max-width: 1170px) {
+  .menu {
+    text-align: left; }
+    .menu .nav-item > .nav-link {
+      font-size: 20px; }
+  .box-pricing .square-title {
+    font-size: 22px; }
+  .box-pricing .pricing-content {
+    font-size: 19px; }
+  .box-pricing .coaching-prive {
+    right: 55%;
+    width: 55%; }
+  .box-pricing .coaching-online {
+    left: 55%;
+    width: 55%; } }
+
+@media screen and (max-width: 975px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .main-title {
+      margin-top: 75px; }
+    main .lg-heading {
+      font-size: 2.5rem;
+      line-height: 1;
+      margin-bottom: 1rem; }
+    main .sm-heading {
+      font-size: 1.5rem; }
+  .fade h3 {
+    font-size: 2rem; }
+  .menu-btn {
+    visibility: visible;
+    z-index: 7; }
+  .menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+    z-index: 6; }
+    .menu.show {
+      visibility: visible; }
+    .menu-nav {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: #7f64b4;
+      list-style: none;
+      transform: translate3d(0, -100%, 0);
+      transition: all 0.5s ease-out; }
+      .menu-nav.show {
+        transform: translate3d(0, 0, 0); }
+    .menu .nav-item {
+      transform: translate3d(600px, 0, 0);
+      transition: all 0.5s ease-out; }
+      .menu .nav-item.show {
+        transform: translate3d(0, 0, 0); }
+    .menu .nav-link {
+      display: inline-block;
+      position: relative;
+      font-size: 30px;
+      text-transform: uppercase;
+      padding: 1rem 0;
+      font-weight: 300;
+      color: #000;
+      text-decoration: none;
+      transition: all 0.5s ease-out; }
+      .menu .nav-link:hover {
+        color: white; }
+  .nav-item:nth-child(1) {
+    transition-delay: 0.1s; }
+  .nav-item:nth-child(2) {
+    transition-delay: 0.2s; }
+  .nav-item:nth-child(3) {
+    transition-delay: 0.3s; }
+  .nav-item:nth-child(4) {
+    transition-delay: 0.4s; }
+  #fitnessetmoi-title {
+    top: 5px; }
+  .box-title {
+    top: 25px;
+    left: 25px;
+    font-size: 25px; }
+    .box-title .bigger {
+      font-size: 35px;
+      border: none; }
+  .box-pricing {
+    margin-top: 25%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 100%;
+    z-index: -1; }
+    .box-pricing .coaching-online, .box-pricing .coaching-prive {
+      position: unset;
+      transform: skew(0);
+      width: 90%;
+      margin: auto; }
+      .box-pricing .coaching-online .square-title, .box-pricing .coaching-prive .square-title {
+        text-align: center;
+        transform: skew(0);
+        margin-left: 0;
+        margin-right: 0; }
+      .box-pricing .coaching-online .pricing-content, .box-pricing .coaching-prive .pricing-content {
+        font-size: 15px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: none;
+        text-align: center;
+        font-style: normal;
+        transform: skew(0); }
+  .contact {
+    font-size: 40px; }
+  .contact_box {
+    font-size: 20px;
+    width: 50%; } }
+
+@media screen and (max-width: 650px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .main-title {
+      margin-top: 35%; }
+    main .lg-heading {
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 1rem; }
+    main .sm-heading {
+      font-size: 1.3rem; }
+  #fitness_moi {
+    background: url("../img/backgrounds/fitness&moi_background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x: center; }
+  #fitnessetmoi-title {
+    top: 25px;
+    left: 25px;
+    font-size: 25px; }
+    #fitnessetmoi-title .bigger {
+      font-size: 35px;
+      border: none; }
+  .box {
+    padding: 0.2rem 1rem;
+    margin-top: 4.3rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; }
+    .box .cursive {
+      font-size: 22px;
+      text-align: left; }
+    .box .desc {
+      font-size: 15px; }
+  .contact {
+    font-size: 40px; }
+  .contact_box {
+    width: 90%;
+    margin: auto;
+    margin-top: 30%;
+    padding: 10% 0 2% 0;
+    font-size: 15px; }
+  .icons {
+    width: 90%;
+    margin: auto;
+    margin-top: 8%; }
+  .box-specialties {
+    margin: 0.5rem;
+    margin-top: 32%;
+    padding: 0rem;
+    display: grid;
+    background: none;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px; }
+    .box-specialties .spec_caf {
+      grid-row: 1;
+      grid-column: 2; }
+    .box-specialties .spec_gym {
+      grid-row: 1;
+      grid-column: 4; }
+    .box-specialties .spec_muscu {
+      grid-row: 4;
+      grid-column: 2; }
+    .box-specialties .spec_running {
+      grid-row: 4;
+      grid-column: 4; }
+    .box-specialties .spec_coachingpers {
+      grid-row: 7;
+      grid-column: 2; }
+    .box-specialties .spec_stretching {
+      grid-row: 7;
+      grid-column: 4; }
+    .box-specialties .spec_prepaphysique {
+      grid-row: 10;
+      grid-column: 3; } }
