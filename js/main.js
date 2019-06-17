@@ -46,44 +46,44 @@ var modalImg = document.getElementById("imgDisplayed");
 var captionText = document.getElementById("caption");
 
 iconCAF.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = "img/specialties/CAF.jpg";
-  captionText.innerHTML = "WOD CAF";
+    modalImg.src = "img/specialties/CAF.jpg";
+    modal.style.display = "block";
+    captionText.innerHTML = "WOD CAF";
 }
 
 iconCoachingPers.onclick = function(){
-    modal.style.display = "block";
     modalImg.src = "img/specialties/coaching_perso.jpg";
-    captionText.innerHTML = "Coachin personnalisé";
+    modal.style.display = "block";
+    captionText.innerHTML = "Coaching personnalisé";
 }
 
 iconGym.onclick = function(){
-    modal.style.display = "block";
     modalImg.src = "img/specialties/gymnastique.jpg";
+    modal.style.display = "block";
     captionText.innerHTML = "Gymnastique";
 }
 
 iconMuscu.onclick = function(){
-    modal.style.display = "block";
     modalImg.src = "img/specialties/musculation.jpg";
+    modal.style.display = "block";
     captionText.innerHTML = "Musculation";
 }
 
 iconPrepaPhy.onclick = function(){
-    modal.style.display = "block";
     modalImg.src = "img/specialties/prepa_physique.jpg";
+    modal.style.display = "block";
     captionText.innerHTML = "Préparation physique";
 }
 
 iconRunning.onclick = function(){
-    modal.style.display = "block";
     modalImg.src = "img/specialties/running.jpg";
+    modal.style.display = "block";
     captionText.innerHTML = "Running";
 }
 
 iconStretching.onclick = function(){
-    modal.style.display = "block";
     modalImg.src = "img/specialties/stretching.jpg";
+    modal.style.display = "block";
     captionText.innerHTML = "Stretching";
 }
 
