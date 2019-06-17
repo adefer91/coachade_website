@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "site vitrine Ade",
   "main": "index.js",
+  "homepage" : "https://adefer91.github.io/coachade_website",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy" : "gh-pages -d dist"
   },
   "author": "Zak",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0"
   }
 }
