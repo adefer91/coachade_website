@@ -163,7 +163,7 @@ h2 {
 .box {
   padding: 0.2rem 1rem;
   margin: 4rem;
-  background: rgba(147, 124, 191, 0.5); }
+  background: rgba(147, 124, 191, 0.9); }
   .box .cursive {
     font-family: Brush Script MT, Brush Script Std, cursive;
     color: #f4c65f;
@@ -196,7 +196,7 @@ h2 {
   .box-pricing .pricing-content {
     font-size: 22px; }
   .box-pricing .coaching-prive {
-    background: #7f64b4;
+    background: rgba(127, 100, 180, 0.5);
     text-align: right;
     width: 45%;
     position: fixed;
@@ -211,7 +211,7 @@ h2 {
       transform: skew(20deg); }
   .box-pricing .coaching-online {
     position: fixed;
-    background: #7f64b4;
+    background: rgba(127, 100, 180, 0.5);
     width: 45%;
     bottom: 10%;
     left: 65%;
@@ -364,7 +364,7 @@ h2 {
   margin-top: 7rem;
   margin-left: 7rem;
   margin-bottom: 3rem;
-  background: #7f64b4;
+  background: rgba(135, 110, 185, 0.8);
   width: 40%;
   box-shadow: 10px 5px 5px grey;
   text-align: center;

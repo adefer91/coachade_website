@@ -95,7 +95,7 @@ h2 {
 .box {
   padding: 0.2rem 1rem;
   margin: 4rem;
-  background: rgba(lighten($primary-color, 2), 0.5);
+  background: rgba(lighten($primary-color, 2), 0.9);
 
   .cursive {
     font-family: Brush Script MT, Brush Script Std, cursive;
@@ -145,7 +145,7 @@ h2 {
   }
 
   .coaching-prive {
-    background: darken($primary-color, 5);
+    background: rgba(darken($primary-color, 5),0.5);
     text-align: right;
     width: 45%;
     position: fixed;
@@ -166,7 +166,7 @@ h2 {
 
   .coaching-online {
     position: fixed;
-    background: darken($primary-color, 5);
+    background: rgba(darken($primary-color, 5),0.5);
     width: 45%;
     bottom: 10%;
     left: 65%;
@@ -359,7 +359,7 @@ h2 {
   margin-top: 7rem;
   margin-left: 7rem;
   margin-bottom: 3rem;
-  background: darken($primary-color, 5);
+  background: rgba(darken($primary-color, 2), 0.8);
   width: 40%;
   box-shadow: 10px 5px 5px grey;
   text-align: center;
