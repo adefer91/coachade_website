@@ -163,7 +163,7 @@ h2 {
 .box {
   padding: 0.2rem 1rem;
   margin: 4rem;
-  background: #937cbf; }
+  background: rgba(147, 124, 191, 0.85); }
   .box .cursive {
     font-family: Brush Script MT, Brush Script Std, cursive;
     color: #f4c65f;

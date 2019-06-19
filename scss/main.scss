@@ -95,7 +95,7 @@ h2 {
 .box {
   padding: 0.2rem 1rem;
   margin: 4rem;
-  background: lighten($primary-color, 2);
+  background: rgba(lighten($primary-color, 2), 0.85);
 
   .cursive {
     font-family: Brush Script MT, Brush Script Std, cursive;
